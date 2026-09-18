@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT SW1 & Drill2</title>
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" /> 
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chango&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+</head>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Google Sans Flex", sans-serif;
+    background: repeating-linear-gradient(
+        90deg,
+        #f879bd 0px,
+        #f879bd 48px,
+        #f56db5 48px,
+        #f56db5 96px
+    );
+}
+
+.box {
+    width: 690px;
+    margin: 60px auto;
+    padding: 70px 90px;
+    background: white;
+}
+
+h2 {
+    margin: 0 0 40px;
+    text-align: center;
+    color: #ff6334;
+    font-size: 52px;
+    font-weight: 800;
+}
+
+h3 {
+    margin: 0 0 35px;
+    color: #f52d91;
+    font-size: 28px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 24px 0;
+    color: #f52d91;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item input {
+    width: 34px;
+    height: 34px;
+}
+
+button {
+    width: 100%;
+    margin: 30px 0 45px;
+    padding: 12px;
+    border: 0;
+    border-radius: 9px;
+    background: #ff7045;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.amount {
+    margin: 28px 0;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.value{
+    margin: 28px 0;
+    font-size: 19px;
+    display: flex;
+    gap: 10px;
+}
+
+h4 {
+    margin-bottom: 35px;
+    color: #f52d91;
+    font-size: 28px;
+}
+
+
+
+</style>
+
+<body>
+    
+<div class="box">
+
+<h2>our catalog.</h2>   
+
+<h4>The Series</h2>
+    <div class="input">
+    <input class="item" type="checkbox" id="1">
+    <span>Orchard Originals - ₱500.00</span><br>
+    </div>
+
+    <div class="input">
+    <input type="checkbox" id="2">
+    <span>Bread Basket - ₱450.00</span><br>
+    </div>
+
+    <div class="input">
+    <input type="checkbox" id="3">
+    <span>Picnic Picks - ₱420.00</span><br>
+    </div>
+
+    <div class="input">
+    <input type="checkbox" id="4">
+    <span>Love Letters - ₱400.00</span><br>
+    </div>
+
+    <div class="input">
+    <button type="submit" py-click="order">Order</button>
+    <br>
+    </div>
+
+    
+
+    <div class="value">
+    <span>Subtotal:</span>
+    <span id="subtotal"></span>
+    </div>
+
+    <div class="value">
+    <span>VAT:</span>
+    <span id="VAT"></span>
+    </div>
+
+    <div class="value">
+    <span>Total:</span>
+    <span id="total"></span>
+    </div>
+
+
+    <py-script type="py" src="main.py"></py-script> 
+</div>
+
+
+</body>
+</html>
